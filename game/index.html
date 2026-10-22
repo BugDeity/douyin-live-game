@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>红蓝大战</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 固定 1080×1920 竖屏舞台，按窗口等比缩放，方便直播伴侣窗口采集 -->
+    <div id="stage">
+      <header>
+        <h1 id="title"></h1>
+        <div id="timer">03:00</div>
+        <div id="phase"></div>
+      </header>
+
+      <div id="tip"></div>
+
+      <section class="teams">
+        <div class="team red">
+          <div class="team-name" id="name-red"></div>
+          <div class="team-score" id="score-red">0</div>
+          <div class="team-count" id="count-red">0 人</div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="team blue">
+          <div class="team-name" id="name-blue"></div>
+          <div class="team-score" id="score-blue">0</div>
+          <div class="team-count" id="count-blue">0 人</div>
+        </div>
+      </section>
+
+      <section class="arena">
+        <div class="avatars left" id="avatars-red"></div>
+        <div class="rope">
+          <div id="bar-left"></div>
+          <div class="center-line"></div>
+          <div id="knot">⚔️</div>
+        </div>
+        <div class="avatars right" id="avatars-blue"></div>
+      </section>
+
+      <section class="boards">
+        <div class="board red">
+          <h2>红方贡献榜</h2>
+          <ol id="board-red"></ol>
+        </div>
+        <div class="board blue">
+          <h2>蓝方贡献榜</h2>
+          <ol id="board-blue"></ol>
+        </div>
+      </section>
+
+      <section id="feed"></section>
+
+      <div class="rules" id="rules"></div>
+      <div id="status"></div>
+
+      <div id="result" hidden>
+        <div id="result-title"></div>
+        <div id="result-score"></div>
+        <div id="result-mvp"></div>
+      </div>
+
+      <div id="help" hidden>
+        <div>空格 / 双击：开始、暂停</div>
+        <div>R：重置本局</div>
+        <div>H：显示 / 隐藏帮助</div>
+      </div>
+    </div>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
